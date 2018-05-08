@@ -40,9 +40,15 @@ namespace Avanade.HoloLens.Workshop1
                 statueOfLibertyVideoClip = Resources.Load<VideoClip>(StatueOfLibertyVideoPath);
         }
 
-        public void PlayEiffelTowerClip() => PlayVideo(eiffelTowerVideoClip);
-        public void PlayStatueOfLibertyClip() => PlayVideo(statueOfLibertyVideoClip);
+        public void PlayEiffelTowerClip()
+        {
+            PlayVideo(eiffelTowerVideoClip);
+        }
 
+        public void PlayStatueOfLibertyClip()
+        {
+            PlayVideo(statueOfLibertyVideoClip);
+        }
 
         private void PlayVideo(VideoClip clip)
         {

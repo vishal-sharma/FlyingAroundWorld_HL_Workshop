@@ -29,8 +29,14 @@ namespace Avanade.HoloLens.Workshop1
                 statueOfLibertyInfoText = Resources.Load<Texture2D>(StatueOfLibertyTexturePath);
         }
 
-        public void DisplayEiffelTowerInfoText() => Screen.GetComponent<Renderer>().material.mainTexture = eiffelTowerInfoText;
-        public void DisplayStatueOfLibertyInfoText() => Screen.GetComponent<Renderer>().material.mainTexture = statueOfLibertyInfoText;
-                
+        public void DisplayEiffelTowerInfoText()
+        {
+            Screen.GetComponent<Renderer>().material.mainTexture = eiffelTowerInfoText;
+        }
+        public void DisplayStatueOfLibertyInfoText()
+        {
+            Screen.GetComponent<Renderer>().material.mainTexture = statueOfLibertyInfoText;
+        }
+
     }
 }

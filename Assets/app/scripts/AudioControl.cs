@@ -29,8 +29,15 @@ namespace Avanade.HoloLens.Workshop1
                 statueOfLibertyAudioClip = Resources.Load<AudioClip>(StatueOfLibertyAudioPath);
         }
 
-        public void PlayEiffelTowerClip() => PlayAudio(eiffelTowerAudioClip);
-        public void PlayStatueOfLibertyClip() => PlayAudio(statueOfLibertyAudioClip);
+        public void PlayEiffelTowerClip()
+        {
+            PlayAudio(eiffelTowerAudioClip);
+        }
+
+        public void PlayStatueOfLibertyClip()
+        {
+            PlayAudio(statueOfLibertyAudioClip);
+        }
 
 
         private float PlayAudio(AudioClip clip)
