@@ -13,13 +13,14 @@ namespace Avanade.HoloLens.Workshop1
         [Tooltip("A float value indicating speed for flying")]
         public float Speed;
 
-        private Transform PlaneIntialTransform;
+        private Vector3 IntialPlanePosition;
 
         private GameObject SelectedBuilding;
 
         void Start()
         {
-            PlaneIntialTransform = AirPlane.transform;
+            var p = AirPlane.transform.localPosition;
+            IntialPlanePosition = new Vector3(p.x, p.y, p.z);
         }
              
 
@@ -39,9 +40,10 @@ namespace Avanade.HoloLens.Workshop1
 
         public void Reset()
         {
-            AirPlane.transform.localPosition = PlaneIntialTransform.localPosition;
-            AirPlane.transform.localRotation = PlaneIntialTransform.localRotation;
-            SelectedBuilding = null;
+            AirPlane.transform.localPosition = IntialPlanePosition;
+            AirPlane.transform.localRotation = Quaternion.Euler(new Vector3(0, 0, 0));
+            UpdateSelectedBuilding(null);
+            InfoTextControl.Instance.Reset();
         }
 
         IEnumerator Fly(Vector3 endPos)

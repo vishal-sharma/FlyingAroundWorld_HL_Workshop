@@ -38,5 +38,10 @@ namespace Avanade.HoloLens.Workshop1
             Screen.GetComponent<Renderer>().material.mainTexture = statueOfLibertyInfoText;
         }
 
+        public void Reset()
+        {
+            Screen.GetComponent<Renderer>().material.mainTexture = null;
+        }
+
     }
 }
